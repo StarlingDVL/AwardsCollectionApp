@@ -19,7 +19,6 @@ struct CustomGridView<Content, T>: View where Content : View {
     var body: some View {
         GeometryReader { geometry in
             let sideSize = geometry.size.width / CGFloat(columns)
-            
             ScrollView {
                 VStack {
                     ForEach(0...rows, id: \.self) { rowIndex in
